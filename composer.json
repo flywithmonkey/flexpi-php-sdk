@@ -1,0 +1,30 @@
+{
+    "name": "flywithmonkey/flexpi-php-sdk",
+    "description": "SDK for access to REST API Flexpi.com",
+    "keywords": ["flexpi", "api"],
+    "homepage": "http://flexpi.com/documentation/rest",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Mikołajczuk",
+            "email": "pawel@flywithmonkey.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+
+    },
+    "suggest": {
+
+    },
+    "autoload": {
+        "psr-0": { "Flexpi": "src/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
