@@ -23,14 +23,6 @@ run the `php composer.phar install` command to install it:
 
 Read the [documentation][2] for more information.
 
-## Tests
-
-To run the test suite, you need [composer](http://getcomposer.org) and
-[PHPUnit](https://github.com/sebastianbergmann/phpunit).
-
-    $ php composer.phar install --dev
-    $ phpunit
-
 ## License
 
 Flexpi PHP-sdk is licensed under the MIT license.
