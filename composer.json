@@ -21,8 +21,10 @@
 
     },
     "autoload": {
-        "psr-0": { "Flexpi": "src/" }
-    },
+        "psr-0": {
+            "Flexpi": "src/"
+        }
+    }
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
