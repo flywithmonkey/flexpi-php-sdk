@@ -49,7 +49,7 @@ class Flexpi {
 
     protected $clientId;
     protected $secret;
-    protected $apiEndpoint = 'http://flexpi.dev/api';
+    protected $apiEndpoint = 'http://flexpi.com/api';
     protected $browser;
 
    /**
@@ -93,19 +93,19 @@ class Flexpi {
      */
     public function getLoginUrl($redirect_uri, $type, $code = '') {
         if ($type == 'code') {
-            return 'http://flexpi.dev/app_dev.php/oauth/v2/auth?'.
+            return 'http://flexpi.com/oauth/v2/auth?'.
                 'client_id='.$this->clientId.'&'.
                 'redirect_uri='.$redirect_uri.'&'.
                 'response_type=code';
         } else if ($type == 'token') {
-            return 'http://flexpi.dev/app_dev.php/oauth/v2/token?'.
+            return 'http://flexpi.com/oauth/v2/token?'.
                 'client_id='.$this->clientId.'&'.
                 'client_secret='.$this->secret.'&'.
                 'redirect_uri='.$redirect_uri.'&'.
                 'grant_type=authorization_code'.'&'.
                 'code='.$code;
         } else if ($type == 'refresh') {
-            return 'http://flexpi.dev/app_dev.php/oauth/v2/token?'.
+            return 'http://flexpi.com/oauth/v2/token?'.
                 'client_id='.$this->clientId.'&'.
                 'client_secret='.$this->secret.'&'.
                 'refresh_token='.$code.'&'.
