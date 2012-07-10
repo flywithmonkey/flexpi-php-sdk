@@ -45,11 +45,11 @@ class Flexpi {
    /**
     * Version.
     */
-    const VERSION = '1.0.0-dev';
+    const VERSION = '1.0.0';
 
     protected $clientId;
     protected $secret;
-    protected $apiEndpoint = 'http://flexpi.dev/app_dev.php/api';
+    protected $apiEndpoint = 'http://flexpi.dev/api';
     protected $browser;
 
    /**
@@ -141,9 +141,16 @@ class Flexpi {
      * @return json         json response from REST API
      */
     public function api($path) {
+        $uri = $this->apiEndpoint.$path;
+
+        if(strpos($path, '?') === false) {
+            $uri .= '?access_token='.$this->getAccessToken();
+        } else {
+            $uri .= '&access_token='.$this->getAccessToken();
+        }
+        
         $response = $this->browser->get(
-            $this->apiEndpoint.$path.'.json?'.
-            'access_token='.$this->getAccessToken()
+           $uri
         );
 
         $result = $response->getContent();
